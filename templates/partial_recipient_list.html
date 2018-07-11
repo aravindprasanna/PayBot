@@ -1,0 +1,10 @@
+ {% for recipient in recipient_cards %}
+        <tr>
+          <td>{{ recipient.card_no }}</td>
+          <td>{{ recipient.expiration }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="7" class="text-center bg-warning">No Cards</td>
+        </tr>
+ {% endfor %}

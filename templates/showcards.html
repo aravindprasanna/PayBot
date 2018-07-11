@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="page-header">Cards</h1>
+
+  <!-- BUTTON TO TRIGGER THE ACTION -->
+  <p>
+    <button type="button" class="btn btn-primary js-create-card">
+      <span class="glyphicon glyphicon-plus"></span>
+      New Card
+    </button>
+  </p>
+
+  <table class="table" id="card-table">
+  <thead>
+      <tr>
+        <th>Card</th>
+        <th>Expiration Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% include 'partial_card_list.html' %}
+    </tbody>
+  </table>
+
+    <h1 class="page-header">Recipients</h1>
+     <p>
+    <button type="button" class="btn btn-primary js-create-recipient">
+      <span class="glyphicon glyphicon-plus"></span>
+      New Recipient
+    </button>
+  </p>
+
+    <table class="table" id="recipient-table">
+  <thead>
+      <tr>
+        <th>Card</th>
+        <th>Expiration Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% include 'partial_recipient_list.html' %}
+    </tbody>
+  </table>
+  <!-- THE MODAL WE WILL BE USING -->
+  <div class="modal fade" id="modal-card">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      </div>
+    </div>
+  </div>
+    <div class="modal fade" id="modal-recipient">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      </div>
+    </div>
+  </div>
+{% endblock %}

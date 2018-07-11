@@ -1,0 +1,10 @@
+ {% for card in cards %}
+        <tr>
+          <td>{{ card.card_no }}</td>
+          <td>{{ card.expiration }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="7" class="text-center bg-warning">No Cards</td>
+        </tr>
+ {% endfor %}
